@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria&display=swap');
+
+
+p{
+    color: #000;
+    align-self: stretch;
+    text-align:center;
+
+/* Paragraph desktop */
+font-family: Alexandria;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px; /* 130% */
+letter-spacing: -0.6px;
+}
+h1{
+    color: #000;
+    text-align: center;
+
+/* Heading 1 Desktop */
+font-family: Alexandria;
+font-size: 96px;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+}
+
+h2{
+    color: #000;
+text-align: center;
+
+/* Heading 2 desktop */
+font-family: Alexandria;
+font-size: 64px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+h3{
+    color: #000;
+
+/* Heading 3 desktop */
+font-family: Alexandria;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+img{
+    height:349px;
+}
+/* Big Brother */
+.bigbrother, .amazingrace, .survivor, .loveisland, .bachelor, .dayfiance, .housewive, .property, .flip{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    gap:51.86px;
+}
+.bigbrother2, .amazingrace2, .survivor2, .loveisland2, .bachelor2, .dayfiance2, .housewive2, .property2, .flip2{
+    display: flex;
+    gap:51.86px;
+}
+/* background color */
+.gameshows{
+    background: #EA5B6F;
+}
+.datingshows{
+    background: #FF894F;
+}
+.home{
+    background: linear-gradient(176deg, #548ACC 3.97%, #EA5B6F 51.08%, #F68952 91.47%);
+    height: 100vh;
+}
+.lifestyle {
+    background-color: #548ACC;
+}
+
+
+/* media queries */
+@media (min-width: 700px) {
+
+  h1 {
+    font-size: 96px;
+  }
+  h2 {
+    font-size: 64px;
+  }
+  h3{
+    font-size: 24px;
+  }
+  p{
+    font-size: 20px;
+  }
+}
