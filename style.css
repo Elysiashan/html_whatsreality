@@ -61,6 +61,16 @@ img{
     display: flex;
     gap:51.86px;
 }
+.label{
+    color: #000;
+font-family: Alexandria;
+font-size: 9px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+display:flex;
+
+}
 /* background color */
 .gameshows{
     background: #EA5B6F;
@@ -74,6 +84,11 @@ img{
 }
 .lifestyle {
     background-color: #548ACC;
+}
+.logo{
+    width: 272px;
+height: 127px;
+flex-shrink: 0;
 }
 
 
