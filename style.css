@@ -48,7 +48,14 @@ font-weight: 500;
 line-height: normal;
 }
 img{
-    height:349px;
+    height:300px;
+}
+div{
+    width: 272px;
+    display: flex;
+    flex-wrap:nowrap;
+    align-items:stretch;
+    flex-direction: column;
 }
 /* Big Brother */
 .bigbrother, .amazingrace, .survivor, .loveisland, .bachelor, .dayfiance, .housewive, .property, .flip{
@@ -87,7 +94,6 @@ display:flex;
 }
 .logo{
     width: 272px;
-height: 127px;
 flex-shrink: 0;
 }
 
