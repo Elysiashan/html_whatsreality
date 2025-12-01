@@ -92,10 +92,7 @@ display:flex;
 .lifestyle {
     background-color: #548ACC;
 }
-.logo{
-    width: 272px;
-flex-shrink: 0;
-}
+
 
 
 /* Navigation Styles */
@@ -109,9 +106,12 @@ flex-shrink: 0;
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    max-width: 270px;
+    max-width: 200px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
 }
 
 .nav ul {
