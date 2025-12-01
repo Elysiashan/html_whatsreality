@@ -8,41 +8,22 @@
 </head>
 <body class="home">
 
-<header>
-     <nav aria-label="main navigation">
-        <a href="index.html" class="nav-logo" aria-label="Home">
-                <div class="nav-logo-circle">
-                    <img src="images/Layer_1 (1).svg" alt""/>
-                </div>
-            <div class="flex-right">
-                <!-- Hamburger menu button - only visible on mobile -->
-                <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">
-                    <span class="sr-only">Toggle navigation menu</span>
-                </button>
-
-
-                <!-- your HTML pages go in this list-->
-                <ul id="main-nav" aria-expanded="false">
-                    <li>
-                        <a href="gameshows.html">
-                            Game Shows
-                        </a>
-                    </li>
-                    <li>
-                        <a href="datingshows.html">
-                            Dating Shows
-                        </a>
-                    </li>
-                    <li>
-                        <a href="lifestyle.html">
-                            Lifestyle
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            </a>
-     </nav>
+<header class="site-header">
+    <div class="logo"><a href="index.html">What's Reality?</a></div>
+    <div>
+        <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Open navigation menu">
+            <span class="icon" aria-hidden="true">☰</span>
+        </button>
+        <nav class="nav" id="main-nav">
+            <ul>
+                <li><a href="gameshows.html">Game Shows</a></li>
+                <li><a href="datingshows.html">Dating Shows</a></li>
+                <li><a href="lifestyle.html">Lifestyle</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
+
 <main>
         <h1>What's Reality?</h1>
         <p><span>Welcome to my website about reality tv and the "reality" of all these
@@ -53,6 +34,8 @@
 
 
     </main>
+
+<script src="script.js"></script>
 </body>
 
 </html>
