@@ -13,7 +13,7 @@ body {
 p {
     color: #000;
     align-self: stretch;
-    
+
     font-style: normal;
     font-weight: 400;
     letter-spacing: -0.6px;
@@ -26,7 +26,7 @@ p {
 h1 {
     color: #000;
     text-align: center;
-    
+
     font-style: normal;
     font-weight: 900;
     line-height: normal;
@@ -38,7 +38,7 @@ h1 {
 h2 {
     color: #000;
     text-align: center;
-    
+
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -49,7 +49,7 @@ h2 {
 
 h3 {
     color: #000;
-    
+
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -76,15 +76,20 @@ main {
     min-width: 300px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 div {
-    width: 100%;
+
     max-width: 272px;
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
     flex-direction: column;
+}
+
+.icon {
+    max-width: 200px;
 }
 
 /* Show sections - consolidated */
@@ -106,7 +111,7 @@ div {
 
 .label {
     color: #000;
-    
+
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -151,6 +156,21 @@ footer {
     position: sticky;
     top: 0;
     z-index: 1000;
+    background-color: #ea5b6e93;
+}
+
+.lifestyle .site-header {
+    background-color: #548acc93;
+}
+.gameshows .site-header {
+    background-color: #ea5b6f93;
+}
+
+.datingshows .site-header {
+    background-color: #ff894f93;
+}
+.home .site-header {
+    background-color: transparent;
 }
 
 .logo {
@@ -177,7 +197,7 @@ footer {
     top: 60px;
     right: 0;
     width: 100%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
