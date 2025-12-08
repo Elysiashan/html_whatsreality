@@ -111,12 +111,14 @@ div {
 
 .label {
     color: #000;
-
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     display: flex;
+    justify-content: center;
+    padding: 0;
+    max-width: 100%;
 }
 
 /* background color */
@@ -267,11 +269,33 @@ footer {
     }
 
     /* make show sections horizontal on wide screens */
-    .show,
-    .show-secondary {
+    .show {
         flex-direction: row;
         gap: 51.86px;
         align-items: flex-start;
+    }
+
+    /* show-secondary: blockquote left, paragraph+image right (vertically stacked) */
+    .show-secondary {
+        flex-direction: row;
+        gap: 51.86px;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .show-secondary > blockquote {
+        order: 1;
+        flex: 0 0 auto;
+    }
+
+    .show-secondary > p {
+        order: 2;
+        flex: 1 1 auto;
+    }
+
+    .show-secondary > img {
+        order: 3;
+        flex: 1 1 100%;
     }
 
     /* desktop navigation: show list, hide toggle */
