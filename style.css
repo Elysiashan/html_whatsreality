@@ -79,14 +79,14 @@ main {
     align-items: center;
 }
 
-div {
+/* div {
 
     max-width: 272px;
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
     flex-direction: column;
-}
+} */
 
 .icon {
     max-width: 200px;
@@ -164,6 +164,7 @@ footer {
 .lifestyle .site-header {
     background-color: #548acc93;
 }
+
 .gameshows .site-header {
     background-color: #ea5b6f93;
 }
@@ -171,6 +172,7 @@ footer {
 .datingshows .site-header {
     background-color: #ff894f93;
 }
+
 .home .site-header {
     background-color: transparent;
 }
@@ -243,6 +245,22 @@ footer {
     padding: 0.5rem 0;
 }
 
+#instagram {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    aspect-ratio: 1 / 1.45;
+
+}
+
+    #instagram-embed-0,
+    #instagram-embed-1,
+    #instagram-embed-2 {
+        width: 100%;
+        height: auto;
+    }
+
+
 /* small-screen rules were promoted to base (mobile-first). */
 
 /* Consolidated desktop media query */
@@ -278,12 +296,11 @@ footer {
     /* show-secondary: blockquote left, paragraph+image right (vertically stacked) */
     .show-secondary {
         flex-direction: row;
-        gap: 51.86px;
-        flex-wrap: wrap;
+        gap: 20px;
         align-items: flex-start;
     }
 
-    .show-secondary > blockquote {
+    /* .show-secondary > blockquote {
         order: 1;
         flex: 0 0 auto;
     }
@@ -296,7 +313,16 @@ footer {
     .show-secondary > img {
         order: 3;
         flex: 1 1 100%;
+    } */
+
+
+    #instagram-embed-0,
+    #instagram-embed-1,
+    #instagram-embed-2 {
+        width: 100%;
+        height: 100%;
     }
+
 
     /* desktop navigation: show list, hide toggle */
     .nav ul {
