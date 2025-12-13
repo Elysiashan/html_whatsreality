@@ -120,10 +120,10 @@ line-height: normal;
 
 /* Secondary/show variants (previously classes with "2") */
 .show-secondary {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
     align-items: center;
+     display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .label {
@@ -144,12 +144,12 @@ aspect-ratio: 869/389;
 
 /* background color */
 .gameshows {
-    background: #EA5B6F;
+  background: #FF894F;
     min-height: 100vh;
 }
 
 .datingshows {
-    background: #FF894F;
+     background: #EA5B6F;
     min-height: 100vh;
 }
 
@@ -187,11 +187,11 @@ footer {
 }
 
 .gameshows .site-header {
-    background-color: #ea5b6f93;
+    background-color:#ff894f93;
 }
 
 .datingshows .site-header {
-    background-color: #ff894f93;
+    background-color: #ea5b6f93;
 }
 
 .home .site-header {
