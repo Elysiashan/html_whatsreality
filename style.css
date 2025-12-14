@@ -31,6 +31,7 @@ p {
     font-size: 16px;
     line-height: 22px;
     padding: 0 1rem;
+    margin: 0 0 1rem;
 }
 
 h1 {
@@ -123,7 +124,7 @@ line-height: normal;
     align-items: center;
      display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .label {
@@ -144,12 +145,12 @@ aspect-ratio: 869/389;
 
 /* background color */
 .gameshows {
-  background: #FF894F;
+    background: #EA5B6F;
     min-height: 100vh;
 }
 
 .datingshows {
-     background: #EA5B6F;
+    background: #FF894F;
     min-height: 100vh;
 }
 
@@ -187,11 +188,11 @@ footer {
 }
 
 .gameshows .site-header {
-    background-color:#ff894f93;
+    background-color: #ea5b6f93;
 }
 
 .datingshows .site-header {
-    background-color: #ea5b6f93;
+    background-color: #ff894f93;
 }
 
 .home .site-header {
@@ -269,20 +270,98 @@ footer {
 
 #instagram {
     width: 100%;
-    max-width: 500px;
-    margin: 20px auto;
-    aspect-ratio: 1 / 1.45;
+    margin: 0;
+    aspect-ratio: auto; /* let the embed determine height on small screens */
+    overflow: hidden;
+    max-width: 100%;
+}
 
+#instagram blockquote.instagram-media {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+/* Tame the Instagram embed skeleton (placeholder) used before the script loads.
+   These selectors target the inline-style padding patterns Instagram uses to
+   simulate aspect-ratio and reduce them on small screens so the placeholder
+   doesn't force a huge vertical gap. */
+blockquote.instagram-media div[style*="padding: 19%"] {
+    padding-top: 6% !important;
+    padding-bottom: 0 !important;
+}
+blockquote.instagram-media div[style*="padding: 12.5%"] {
+    padding-top: 4% !important;
+    padding-bottom: 0 !important;
+}
+blockquote.instagram-media div[style*="padding:16px"] {
+    padding: 8px !important;
+}
+blockquote.instagram-media div[style*="height:50px"] {
+    height: 36px !important;
+}
+
+/* extreme small screens: cap placeholder height so it doesn't push content away */
+@media (max-width: 420px) {
+    #instagram {
+        max-height: 55vh;
+        overflow: hidden;
+    }
+    blockquote.instagram-media div[style*="padding: 19%"] {
+        padding-top: 5% !important;
+    }
 }
 
     #instagram-embed-0,
     #instagram-embed-1,
     #instagram-embed-2 {
-        width: 100%;
+        width: auto;
     }
 
 
 /* small-screen rules were promoted to base (mobile-first). */
+
+/* Tablet breakpoint */
+@media (min-width: 768px) {
+    .show-secondary {
+        gap: 1.5rem;
+    }
+    /* keep embeds from becoming extremely tall on medium screens */
+    #instagram {
+        max-width: 400px;
+        aspect-ratio: 1 / 1.45;
+        margin: 0;
+        flex: 0 0 auto;
+    }
+}
+
+/* Laptop breakpoint — narrower than desktop but wider than tablet */
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* Give Instagram embeds a predictable size on laptop screens */
+    #instagram {
+        max-width: 600px;
+        /* taller embed for laptop screens */
+        aspect-ratio: 3 / 4;
+        flex: 0 0 50%;
+        margin: 0;
+    }
+
+    #instagram blockquote.instagram-media {
+        max-width: 600px !important;
+        width: 100% !important;
+    }
+
+    .show-secondary {
+        gap: 24px;
+        align-items: flex-start;
+        flex-direction: row;
+    }
+
+    /* Make sure the sibling content can fill the remaining space */
+    .show-secondary > div {
+        flex: 1 1 52%;
+    }
+}
 
 /* Consolidated desktop media query */
 @media (min-width: 1200px) {
@@ -316,10 +395,32 @@ footer {
 
     /* show-secondary: blockquote left, paragraph+image right (vertically stacked) */
     .show-secondary {
-        flex-direction: row;
-        gap: 20px;
-        align-items: flex-start;
+        gap: 30px;
+        align-items: center;
+        flex-direction:row;
+
     }
+    
+    /* Desktop: make Instagram taller and allow larger max width */
+    .show-secondary > #instagram {
+        max-width: 760px;
+        /* taller than before */
+        aspect-ratio: 2 / 3;
+        flex: 0 0 45%;
+    }
+
+    .show-secondary > #instagram blockquote.instagram-media {
+        max-width: 760px !important;
+        width: 100% !important;
+    }
+
+    /* keep layout changes scoped to show containers */
+    .show > div,
+    .show-secondary > div {
+        display: flex;
+        flex-direction: column;
+    }
+
 
     /* .show-secondary > blockquote {
         order: 1;
