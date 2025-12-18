@@ -145,12 +145,12 @@ aspect-ratio: 869/389;
 
 /* background color */
 .competition {
-    background: #EA5B6F;
+    background: #FF894F;
     min-height: 100vh;
 }
 
 .datingshows {
-    background: #FF894F;
+    background:#EA5B6F ;
     min-height: 100vh;
 }
 
@@ -188,11 +188,11 @@ footer {
 }
 
 .competition .site-header {
-    background-color: #ea5b6f93;
+    background-color:#ff894f93 ;
 }
 
 .datingshows .site-header {
-    background-color: #ff894f93;
+    background-color: #ea5b6f93;
 }
 
 .home .site-header {
